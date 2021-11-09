@@ -60,6 +60,7 @@ function jsonProcessing(json) {
 
         let gbpSymbol = document.getElementById("gbp3");
         gbpSymbol.innerHTML = "" + json.bpi.GBP.symbol;
+
         // gbp SECTION
 }
 

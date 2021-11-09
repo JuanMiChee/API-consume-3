@@ -85,13 +85,20 @@ a{
 
 .button{
     border-radius: 4px;
+    height: 1px;
     width: 50%;
     font-size: 18px;
     font-weight: 500;   
-    padding: 12px 25px;
     margin-top: 20px;
     color: white;
     background-color: #302f3d;
+}
+
+.style{
+    border-top: 2px solid #302f3d;
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
 .button:hover{
