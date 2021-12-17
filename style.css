@@ -17,9 +17,8 @@ header{
     margin-right: 20%;
     margin-left: 10px;
     border-bottom: solid #302f3d 2px;
+    width: 30%;
 }
-
-
 
 header .header-section{
     display: flex;
@@ -27,12 +26,17 @@ header .header-section{
     justify-self: flex-end;
 }
 
-.header-section .item{
+header .header-section div{
+    display: flex;
+}
+
+header .header-section div .item{
     display: flex;
     color: #302f3d;
     font-size: 18px;
     font-weight: 600;
     margin-top: 16px;
+    margin-right: 50px;
 }
 
 .header-section .item:hover{
@@ -44,10 +48,6 @@ header .header-section{
     color: #72718a;   
 }
 
-.header-section .item{
-    margin-right: 50px;
-}
-
 .principal-main-section{
     display: flex;
 }
@@ -56,7 +56,6 @@ header .header-section{
     width: 30%;
     margin-left: 50px;
     margin-top: 20px;
-    margin-right: 0;
 }
 
 .tittle{
@@ -76,7 +75,6 @@ header .header-section{
 
 .left-main-section img{
     width: 98%;
-    margin-left: 20%;
 }
 
 a{
@@ -117,12 +115,6 @@ a{
     display: flex;
 }
 
-.below-info-section .right-info{  
-    width: 50%;
-    margin-top: 10%;
-    
-}
-
 .below-info-section .right-info h1{
     font-size: 50px;
     margin-left: 15%;
@@ -145,6 +137,7 @@ a{
     margin-top: 20px;
     border-left: solid #302f3d;
     padding: 30px;
+    margin: auto;
 }
 
 .below-info-section .left-info img{
@@ -180,6 +173,7 @@ footer .left-footer-section{
     color: #9c9c9c;
     background-color: #292935;
     padding: 15px 25px;
+    cursor: pointer;
     margin-left: 36%;
 }
 
@@ -190,20 +184,218 @@ footer .left-footer-section{
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid #292935; /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
     margin-left: 40%;
-    margin-top: 50%;
+    margin-top: 20%;
     margin-bottom: -40%;
   }
-  
-  @keyframes spin {
+
+@media screen and (min-width: 780px) and (max-width:1024px) {
+      
+}
+@media screen and (min-width: 600px) and (max-width:780px) {
+    .principal-main-section{
+        display: block;
+    }
+    .logo{
+        margin-right: 5%;
+    }
+
+    .header-section .item{
+        margin-right: 20px;
+        font-size: 17px;
+    }
+
+    .logo img{
+        width: 200px;
+    }
+
+    .right-main-section{
+        /* position: absolute; */
+        width: 100%;
+        padding-right: 10%;
+        
+    }
+
+    .tittle{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .left-main-section{
+        width: 85%;
+        margin-left: 10%;
+
+    }
+
+    .left-info img{
+        display: none;
+
+    }
+    .header-section{
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .right-info{
+        display: block;
+        width: 100%;
+    }
+
+    .below-info-section .right-info h1{
+        font-size: 35px;
+        text-align: center;
+        margin-left: -2%;
+    }
+
+
+    .below-info-section .right-info h3{
+        text-align: center;
+
+    }
+
+    .below-info-section .right-info h4{
+        margin-left: 10%;
+
+    }
+
+    
+      
+}
+@media screen and (min-width: 480px) and (max-width: 600px){
+    /* body{
+        overflow-x: hidden;
+    } */
+
+    .principal-main-section{
+        display: block;
+    }
+
+    .logo img{
+        width: 200px;
+        margin-right: 0;
+        margin-top: 20%;
+    }
+
+    .logo{
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .right-main-section{
+        /* position: absolute; */
+        width: 100%;
+        padding-right: 15%;
+        
+    }
+
+    .tittle{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .left-main-section{
+        width: 85%;
+        margin-left: 7%;
+
+    }
+
+    .left-info img{
+        display: none;
+
+    }
+
+    .right-info{
+        display: block;
+        width: 100%;
+    }
+
+    .below-info-section .right-info h1{
+        font-size: 35px;
+        text-align: center;
+        margin-left: -2%;
+    }
+
+
+    .below-info-section .right-info h3{
+        text-align: center;
+
+    }
+
+    .below-info-section .right-info h4{
+        margin-left: 10%;
+    }
+
+    .header-section #links-container{
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        position: fixed;
+        background: rgb(206, 206, 206);
+        display: block;
+        left: 105%;
+    }
+
+    .header-section #links-container .item{
+        background: rgb(206, 206, 206);
+        bottom: 50%;
+        font-size: 50px;
+        margin-left: 25%;
+    }
+    
+    #toggle-btn{
+        display: block;
+        position: absolute;
+        left:80%;
+        top: 5%;
+    }
+    #toggle-btn-two{
+        background: rgb(206, 206, 206);
+        display: block;
+        position: absolute;
+        left:80%;
+        top: 5%;
+    }
+
+    .header-section #toggle-btn span{
+        background: black;
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin: 3px;
+    }
+    .header-section #toggle-btn-two span{       
+        background: black;
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin: 3px;
+    }
+
+    .header-section #links-container.active{
+        display: block;
+        left:0;
+    }
+    header .header-section div .item{
+        margin-top: 10%;
+    }
+    
+    header{
+        padding-top: 0%;
+    }
+}    
+
+@media screen and (min-width: 280px) and (max-width: 480){
+
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-
+}
 
   

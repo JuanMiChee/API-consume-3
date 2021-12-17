@@ -4,14 +4,14 @@ async function fetchCryptoApi() {
     return response.json();
 }
 
-function showAll(){
-    fetchCryptoApi().then(jsonProcessing);
-    toggleLoad();
-    
+function showAll(){  
+    toggleLoad(); 
+    fetchCryptoApi().then(jsonProcessing);  
 }
-showAll();
+fetchCryptoApi().then(jsonProcessing);
+
 let loaderHide = document.getElementById("loader");
-loaderHide.style.display = 'block';
+// loaderHide.style.display = 'block';
 
 function toggleLoad(){
     let loader = document.getElementById("loader");
@@ -21,6 +21,7 @@ function toggleLoad(){
       loader.style.display = "none";     
        }
     }
+    
 
 function jsonProcessing(json) {         
     let timeJsonObject = json.time.updated;       
@@ -74,6 +75,11 @@ function showEurInformation(json){
     // gbp SECTION
 
 }
+
+function toggleMenu(){
+    document.getElementById('links-container').classList.toggle('active');
+    // document.getElementById('movies-container').classList.toggle('hide');
+} 
 
 
 
